@@ -12,6 +12,14 @@ books_info = []
 # 여러 페이지를 순회
 for page in range(1, 3):  # 예시로 1페이지부터 3페이지까지 처리
     print(f'{page} 페이지 처리중...')
+    print("\n")
+    print("\n")
+    print("장경호 대장님 항상 존경합니다. 3행시 한번 조지겠습니다.")
+    print("\n")
+    print("대장님 사 고 감")
+    print("사: 사랑합니다.")
+    print("고: 고맙습니다.")
+    print("감: 감사합니다.")
     # 검색 URL, 페이지 번호를 포함
     url = f'https://www.yes24.com/Product/Search?domain=ALL&query={quote(search_word)}&page={page}'
     
@@ -65,8 +73,10 @@ for page in range(1, 3):  # 예시로 1페이지부터 3페이지까지 처리
 # 데이터 프레임 생성
 df = pd.DataFrame(books_info)
 
-# '제목 없음'인 항목이 이미 필터링되어 있으므로, 추가적인 작업 없이 바로 엑셀 파일로 저장
-excel_filename = 'books_info_filtered.xlsx'
+# 파일 이름 생성
+excel_filename = f'{search_word} Books_info.xlsx'
+
+# 엑셀 파일로 저장
 df.to_excel(excel_filename, index=False)
 
 print(f'"{excel_filename}" 파일에 저장되었습니다.')
