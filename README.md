@@ -7,6 +7,7 @@
 바꿔야할 사항
 search_word = 원하는 책이름
 for page in range(a, b) = a~b 검색페이지까지 크롤링
+엑셀파일은 f'{search_word} Books_info.xlsx' 입니다.
 
 이후 엑셀파일로 저장됨,
 
